@@ -1,0 +1,70 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+h1 {
+    text-align: center;
+    color: #eeeeee;
+    padding-top: 30vh;
+    text-shadow: 0 0 6px #000000, 0 0 5px #000;
+    font-size: 10vh;
+}
+nav {
+    padding: 5px;
+    padding-top: 4em;
+    margin: 0 auto;
+
+    text-align: center;
+    height: 3em;
+}
+
+.sel {
+    transition: 0.2s;
+    font-size: 1.5em;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: 900;
+    color: #eeeeee;
+    text-shadow: 0 0 6px #000000, 0 0 5px #000;
+    text-decoration: none;
+}
+
+.idk {
+    background-image: url("../images/IMG_20220227_153848.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+}
+
+.fin {
+    text-align: center;
+    padding-top: 15vw;
+}
+.fin2 {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.soc {
+    transition: 0.2s;
+    transform: scale(1.5);
+    padding: 1em;
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.sel:hover {
+    transition-timing-function: ease-in-out;
+    /* font-size: 1.7em; */
+    /* padding-right: 1.1em; */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.soc:hover {
+    transition-timing-function: ease-in-out;
+    transform: scale(2);
+}
