@@ -20,7 +20,7 @@ nav {
 }
 
 .sel {
-    transition: 0.2s;
+    transition: 0.3s;
     font-size: 1.5em;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -57,14 +57,14 @@ nav {
     text-decoration: none;
 }
 
-.sel:hover {
-    transition-timing-function: ease-in-out;
-    /* font-size: 1.7em; */
-    /* padding-right: 1.1em; */
-    background-color: rgba(255, 255, 255, 0.7);
-}
+@media screen and (min-width: 480px) {
+    .sel:hover {
+        transition-timing-function: ease-in-out;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
 
-.soc:hover {
-    transition-timing-function: ease-in-out;
-    transform: scale(2);
+    .soc:hover {
+        transition-timing-function: ease-in-out;
+        transform: scale(1.8);
+    }
 }
