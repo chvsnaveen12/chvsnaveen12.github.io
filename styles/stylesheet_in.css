@@ -50,14 +50,18 @@ nav {
 }
 
 .soc {
-    transition: 0.2s;
+    transition: 0.3s;
     transform: scale(1.5);
     padding: 1em;
     color: #eeeeee;
     text-decoration: none;
 }
-
-@media screen and (min-width: 480px) {
+/* @media screen and (max-width: 480px) {
+    .tooltiptext {
+        visibility: hidden;
+    }
+} */
+@media screen and (min-width: 500px) {
     .sel:hover {
         transition-timing-function: ease-in-out;
         background-color: rgba(255, 255, 255, 0.7);
@@ -67,4 +71,39 @@ nav {
         transition-timing-function: ease-in-out;
         transform: scale(1.8);
     }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+}
+
+.tooltip .tooltiptext {
+    font-size: 0.4em;
+    visibility: hidden;
+    width: 7em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eeeeee;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 50%;
+    margin-left: -3.5em;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
