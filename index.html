@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
+        <!-- <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-V97NVS0JJ4"
+            src="https://www.googletagmanager.com/gtag/js?id=G-E0QX9YMTVG"
         ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -13,8 +13,8 @@
             }
             gtag("js", new Date());
 
-            gtag("config", "G-V97NVS0JJ4");
-        </script>
+            gtag("config", "G-E0QX9YMTVG");
+        </script> -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -45,6 +45,7 @@
 
             <!-- Add icon library -->
             <!-- Add font awesome icons -->
+
             <div class="fin">
                 <a
                     href="https://twitter.com/chvsnaveen12"
@@ -59,9 +60,11 @@
                     class="fa fa-spotify soc"
                 ></a>
                 <a
-                    href="https://discord.gg/nMCHj92gpx"
-                    class="fa-brands fa-discord soc"
-                ></a>
+                    onclick="copyToClipBoardDisc()"
+                    onmouseout="mouseOut()"
+                    class="fa-brands fa-discord soc tooltip"
+                    ><span class="tooltiptext" id="disc">Copy!</span></a
+                >
             </div>
             <div class="fin2">
                 <a
@@ -73,11 +76,38 @@
                     class="fa fa-github soc"
                 ></a>
                 <a
-                    href="mailto:chvsnaveen12@gmail.com"
-                    class="fa fa-envelope soc"
-                ></a>
+                    onclick="copyToClipBoardEmail()"
+                    class="fa fa-envelope soc tooltip"
+                    onmouseout="mouseOut()"
+                    ><span class="tooltiptext" id="email">Copy!</span></a
+                >
             </div>
         </div>
-        <script src="js/script.js"></script>
+        <textarea id="Email">chvsnaveen12@gmail.com</textarea>
+
+        <textarea id="Disc">chvsnaveen12#6930</textarea>
+        <script>
+            function copyToClipBoardEmail() {
+                var content = document.getElementById("Email");
+                var tooltip = document.getElementById("email");
+                content.select();
+                document.execCommand("copy");
+                tooltip.innerHTML = "Copied!";
+            }
+            function copyToClipBoardDisc() {
+                var content = document.getElementById("Disc");
+                var tooltip = document.getElementById("disc");
+
+                content.select();
+                document.execCommand("copy");
+                tooltip.innerHTML = "Copied!";
+            }
+            function mouseOut() {
+                var tooltip1 = document.getElementById("email");
+                var tooltip = document.getElementById("disc");
+                tooltip1.innerHTML = "Copy!";
+                tooltip.innerHTML = "Copy!";
+            }
+        </script>
     </body>
 </html>
