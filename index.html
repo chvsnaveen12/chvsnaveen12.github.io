@@ -83,23 +83,25 @@
                 >
             </div>
         </div>
-        <textarea id="Email">chvsnaveen12@gmail.com</textarea>
-
-        <textarea id="Disc">chvsnaveen12#6930</textarea>
+        <textarea id="Email" disabled>chvsnaveen12@gmail.com</textarea>
+        <textarea id="Disc" disabled>chvsnaveen12#6930</textarea>
         <script>
             function copyToClipBoardEmail() {
                 var content = document.getElementById("Email");
                 var tooltip = document.getElementById("email");
+                content.disabled = false;
                 content.select();
                 document.execCommand("copy");
+                content.disabled = true;
                 tooltip.innerHTML = "Copied!";
             }
             function copyToClipBoardDisc() {
                 var content = document.getElementById("Disc");
                 var tooltip = document.getElementById("disc");
-
+                content.disabled = false;
                 content.select();
                 document.execCommand("copy");
+                content.disabled = true;
                 tooltip.innerHTML = "Copied!";
             }
             function mouseOut() {
